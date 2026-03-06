@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="320" viewBox="0 0 920 320">
+  <rect width="920" height="320" fill="#f4f1ea"/>
+  <rect x="40" y="40" width="180" height="110" rx="12" fill="#d9e7ff" stroke="#204060" stroke-width="2"/>
+  <text x="130" y="82" font-family="Helvetica, Arial, sans-serif" font-size="22" text-anchor="middle" fill="#102a43">PS</text>
+  <text x="130" y="112" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#102a43">ARM + DDR</text>
+  <text x="130" y="136" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#102a43">Python control</text>
+
+  <rect x="300" y="40" width="220" height="110" rx="12" fill="#fff0cc" stroke="#7b5b00" stroke-width="2"/>
+  <text x="410" y="82" font-family="Helvetica, Arial, sans-serif" font-size="22" text-anchor="middle" fill="#5a4100">AXI4-Lite</text>
+  <text x="410" y="112" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#5a4100">control path</text>
+  <text x="410" y="136" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#5a4100">register writes and reads</text>
+
+  <rect x="600" y="40" width="260" height="110" rx="12" fill="#dff7e2" stroke="#1f5f2c" stroke-width="2"/>
+  <text x="730" y="82" font-family="Helvetica, Arial, sans-serif" font-size="22" text-anchor="middle" fill="#1f5f2c">Booth Multiplier</text>
+  <text x="730" y="112" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1f5f2c">AXI4-Lite IP</text>
+  <text x="730" y="136" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#1f5f2c">32-bit operands, 64-bit result</text>
+
+  <rect x="300" y="200" width="220" height="90" rx="12" fill="#fce0d5" stroke="#8a3d1c" stroke-width="2"/>
+  <text x="410" y="236" font-family="Helvetica, Arial, sans-serif" font-size="22" text-anchor="middle" fill="#8a3d1c">AXI DMA</text>
+  <text x="410" y="262" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#8a3d1c">MM2S / S2MM</text>
+
+  <rect x="600" y="190" width="260" height="110" rx="12" fill="#efe1ff" stroke="#52307c" stroke-width="2"/>
+  <text x="730" y="228" font-family="Helvetica, Arial, sans-serif" font-size="22" text-anchor="middle" fill="#52307c">3x3 Stream Filter</text>
+  <text x="730" y="256" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#52307c">AXI4-Stream in / out</text>
+  <text x="730" y="280" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#52307c">Sobel, blur, sharpen</text>
+
+  <line x1="220" y1="95" x2="300" y2="95" stroke="#333" stroke-width="3"/>
+  <line x1="520" y1="95" x2="600" y2="95" stroke="#333" stroke-width="3"/>
+  <line x1="220" y1="245" x2="300" y2="245" stroke="#333" stroke-width="3"/>
+  <line x1="520" y1="245" x2="600" y2="245" stroke="#333" stroke-width="3"/>
+  <line x1="130" y1="150" x2="130" y2="245" stroke="#333" stroke-width="3"/>
+  <text x="250" y="82" font-family="Helvetica, Arial, sans-serif" font-size="14" text-anchor="middle" fill="#333">MMIO</text>
+  <text x="560" y="82" font-family="Helvetica, Arial, sans-serif" font-size="14" text-anchor="middle" fill="#333">control</text>
+  <text x="250" y="232" font-family="Helvetica, Arial, sans-serif" font-size="14" text-anchor="middle" fill="#333">DDR frames</text>
+  <text x="560" y="232" font-family="Helvetica, Arial, sans-serif" font-size="14" text-anchor="middle" fill="#333">stream path</text>
+</svg>

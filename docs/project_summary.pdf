@@ -1,0 +1,223 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+2 0 obj
+<< /Type /Pages /Count 2 /Kids [4 0 R 6 0 R] >>
+endobj
+3 0 obj
+<< /Length 2257 >>
+stream
+BT
+/F1 11 Tf
+14 TL
+54 738 Td
+(PROJECT SUMMARY) Tj
+T*
+() Tj
+T*
+() Tj
+T*
+(OBJECTIVE) Tj
+T*
+() Tj
+T*
+() Tj
+T*
+(The goal of this project is to build a small reusable accelerator platform on the) Tj
+T*
+(PYNQ-Z2. The platform combines one register-mapped arithmetic block and one DMA-backed) Tj
+T*
+(streaming image block so the software and hardware sides can be tested together instead) Tj
+T*
+(of as separate demos.) Tj
+T*
+() Tj
+T*
+(SYSTEM ARCHITECTURE) Tj
+T*
+() Tj
+T*
+() Tj
+T*
+(The hardware side uses a Zynq processing system, AXI4-Lite for control, and AXI DMA for) Tj
+T*
+(the streaming image path. The multiplier is controlled through MMIO registers. The 3x3) Tj
+T*
+(filter receives one grayscale pixel per AXI stream beat and writes one output pixel per) Tj
+T*
+(beat back to memory through DMA.) Tj
+T*
+() Tj
+T*
+(ARITHMETIC IP DESIGN) Tj
+T*
+() Tj
+T*
+() Tj
+T*
+(The arithmetic block is a radix-4 Booth multiplier written in HLS. It accepts two) Tj
+T*
+(operands, a mode register, and returns a 64-bit product split across two 32-bit) Tj
+T*
+(registers. The mode field selects 8, 16, 24, or 32-bit operation and also selects signed) Tj
+T*
+(or unsigned arithmetic. The software driver writes the operands, sets the mode, starts) Tj
+T*
+(the block, waits for the done bit, and reads the result.) Tj
+T*
+() Tj
+T*
+(STREAMING IMAGE IP DESIGN) Tj
+T*
+() Tj
+T*
+() Tj
+T*
+(The image block is a streaming 3x3 filter with zero-padded borders. A small set of) Tj
+T*
+(runtime-selectable modes is included so the same block can be reused for pass-through,) Tj
+T*
+(blur, sharpen, Sobel X, Sobel Y, and Sobel magnitude. The HLS core keeps two line) Tj
+T*
+(buffers and one 3x3 window so the filter can run as a normal stream operator instead of) Tj
+T*
+(a frame buffer kernel.) Tj
+T*
+() Tj
+T*
+(AXI INTEGRATION) Tj
+T*
+() Tj
+T*
+() Tj
+T*
+(Both accelerators use AXI4-Lite for configuration. The image path also uses AXI4-Stream) Tj
+T*
+(and AXI DMA. The expected data path is PS DDR to DMA, DMA to filter IP, filter IP back) Tj
+T*
+(to DMA, and DMA back to PS DDR. The Vivado scripts in `hardware/vivado/scripts/` set up) Tj
+T*
+(the base project, the DMA block, the AXI control path, and the packaging step for the) Tj
+T*
+(overlay files.) Tj
+T*
+() Tj
+T*
+(PYTHON CONTROL FLOW) Tj
+T*
+() Tj
+ET
+endstream
+endobj
+4 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 3 0 R /Resources << /Font << /F1 1 0 R >> >> >>
+endobj
+5 0 obj
+<< /Length 1932 >>
+stream
+BT
+/F1 11 Tf
+14 TL
+54 738 Td
+() Tj
+T*
+(The Python side is split into small driver modules. `ArithmeticOverlay` handles register) Tj
+T*
+(writes and reads for the multiplier. `VisionOverlay` sets the image dimensions, writes) Tj
+T*
+(the filter mode, allocates buffers, launches DMA transfers, and returns the processed) Tj
+T*
+(frame. `AcceleratorOverlay` collects both blocks behind one object so the notebooks and) Tj
+T*
+(tests can use a shared control style.) Tj
+T*
+() Tj
+T*
+(VERIFICATION) Tj
+T*
+() Tj
+T*
+() Tj
+T*
+(The multiplier is checked with directed tests and random tests across several active) Tj
+T*
+(widths. The vision block is checked against a NumPy reference model for pass-through,) Tj
+T*
+(blur, sharpen, and Sobel modes. A mock MMIO and DMA backend is included so the whole) Tj
+T*
+(Python path can run on a host machine without a board.) Tj
+T*
+() Tj
+T*
+(BENCHMARK RESULTS) Tj
+T*
+() Tj
+T*
+() Tj
+T*
+(The sample benchmark JSON in `data/benchmark_results/sample_results.json` is generated) Tj
+T*
+(with the mock backend. It is only meant to check the control flow and report formatting.) Tj
+T*
+(On real hardware the multiplier should be measured against the ARM software path and the) Tj
+T*
+(filter should be measured in frame time and FPS with DMA included in the timing.) Tj
+T*
+() Tj
+T*
+(LIMITATIONS) Tj
+T*
+() Tj
+T*
+() Tj
+T*
+(  - The repo does not include a checked-in bitstream because that is a build output.) Tj
+T*
+(  - The current image path uses grayscale frames to keep the stream kernel and tests) Tj
+T*
+(simple.) Tj
+T*
+(  - Real board-side benchmark numbers still need to be collected after Vivado and HLS) Tj
+T*
+(builds are complete.) Tj
+T*
+() Tj
+T*
+(FUTURE WORK) Tj
+T*
+() Tj
+T*
+() Tj
+T*
+(  - add a MAC or FIR block to the arithmetic side) Tj
+T*
+(  - add tiled image support for larger frames) Tj
+T*
+(  - add a live HDMI or camera demo path) Tj
+T*
+(  - compare HLS pragmas and resource use after synthesis) Tj
+ET
+endstream
+endobj
+6 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 5 0 R /Resources << /Font << /F1 1 0 R >> >> >>
+endobj
+7 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+xref
+0 8
+0000000000 65535 f 
+0000000009 00000 n 
+0000000079 00000 n 
+0000000142 00000 n 
+0000002450 00000 n 
+0000002576 00000 n 
+0000004559 00000 n 
+0000004685 00000 n 
+trailer
+<< /Size 8 /Root 7 0 R >>
+startxref
+4734
+%%EOF

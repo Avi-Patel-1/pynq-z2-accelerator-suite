@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="260" viewBox="0 0 900 260">
+  <rect width="900" height="260" fill="#f7f3ee"/>
+  <text x="450" y="34" font-family="Helvetica, Arial, sans-serif" font-size="24" text-anchor="middle" fill="#222">Sample image path outputs</text>
+
+  <rect x="60" y="70" width="220" height="150" fill="#d9d9d9" stroke="#333" stroke-width="2"/>
+  <rect x="340" y="70" width="220" height="150" fill="#efefef" stroke="#333" stroke-width="2"/>
+  <rect x="620" y="70" width="220" height="150" fill="#d0d0d0" stroke="#333" stroke-width="2"/>
+
+  <path d="M80 90 L120 90 L120 130 L160 130 L160 170 L200 170 L200 210" stroke="#222" stroke-width="14" fill="none"/>
+  <path d="M380 90 L420 130 L460 170 L500 210" stroke="#222" stroke-width="10" fill="none"/>
+  <path d="M660 90 L700 90 L700 130 L740 130 L740 170 L780 170 L780 210" stroke="#222" stroke-width="5" fill="none"/>
+
+  <text x="170" y="238" font-family="Helvetica, Arial, sans-serif" font-size="18" text-anchor="middle" fill="#333">input pattern</text>
+  <text x="450" y="238" font-family="Helvetica, Arial, sans-serif" font-size="18" text-anchor="middle" fill="#333">Sobel magnitude</text>
+  <text x="730" y="238" font-family="Helvetica, Arial, sans-serif" font-size="18" text-anchor="middle" fill="#333">blur output</text>
+</svg>

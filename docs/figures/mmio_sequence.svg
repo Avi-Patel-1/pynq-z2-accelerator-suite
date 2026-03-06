@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="260" viewBox="0 0 900 260">
+  <rect width="900" height="260" fill="#fbfaf7"/>
+  <text x="450" y="34" font-family="Helvetica, Arial, sans-serif" font-size="24" text-anchor="middle" fill="#222">MMIO and DMA control flow</text>
+
+  <text x="120" y="74" font-family="Helvetica, Arial, sans-serif" font-size="18" text-anchor="middle" fill="#333">Python</text>
+  <text x="360" y="74" font-family="Helvetica, Arial, sans-serif" font-size="18" text-anchor="middle" fill="#333">AXI4-Lite IP</text>
+  <text x="620" y="74" font-family="Helvetica, Arial, sans-serif" font-size="18" text-anchor="middle" fill="#333">AXI DMA</text>
+  <text x="820" y="74" font-family="Helvetica, Arial, sans-serif" font-size="18" text-anchor="middle" fill="#333">DDR</text>
+
+  <line x1="120" y1="84" x2="120" y2="230" stroke="#444" stroke-width="2"/>
+  <line x1="360" y1="84" x2="360" y2="230" stroke="#444" stroke-width="2"/>
+  <line x1="620" y1="84" x2="620" y2="230" stroke="#444" stroke-width="2"/>
+  <line x1="820" y1="84" x2="820" y2="230" stroke="#444" stroke-width="2"/>
+
+  <line x1="120" y1="110" x2="360" y2="110" stroke="#a13d2d" stroke-width="3"/>
+  <text x="240" y="102" font-family="Helvetica, Arial, sans-serif" font-size="14" text-anchor="middle" fill="#a13d2d">write operands / mode</text>
+
+  <line x1="120" y1="140" x2="360" y2="140" stroke="#a13d2d" stroke-width="3"/>
+  <text x="240" y="132" font-family="Helvetica, Arial, sans-serif" font-size="14" text-anchor="middle" fill="#a13d2d">set start bit</text>
+
+  <line x1="120" y1="170" x2="620" y2="170" stroke="#2a6f97" stroke-width="3"/>
+  <text x="370" y="162" font-family="Helvetica, Arial, sans-serif" font-size="14" text-anchor="middle" fill="#2a6f97">launch DMA send/recv</text>
+
+  <line x1="620" y1="200" x2="820" y2="200" stroke="#2a6f97" stroke-width="3"/>
+  <text x="720" y="192" font-family="Helvetica, Arial, sans-serif" font-size="14" text-anchor="middle" fill="#2a6f97">move frame buffers</text>
+
+  <line x1="360" y1="225" x2="120" y2="225" stroke="#3f7d20" stroke-width="3"/>
+  <text x="240" y="217" font-family="Helvetica, Arial, sans-serif" font-size="14" text-anchor="middle" fill="#3f7d20">poll done and read back</text>
+</svg>

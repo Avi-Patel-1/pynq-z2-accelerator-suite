@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.DS_Store
+.pytest_cache/
+build/
+dist/
+tmp/
+hardware/export/*.bit
+hardware/export/*.bin
+hardware/export/*.hwh
+hardware/export/*.xsa
+hardware/export/*.xclbin

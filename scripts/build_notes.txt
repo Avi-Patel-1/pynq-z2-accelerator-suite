@@ -1,0 +1,7 @@
+1. Start with the HLS projects in hardware/hls/.
+2. Run hardware/vivado/scripts/build_hls_ip.tcl in Vitis HLS.
+3. Open Vivado and run hardware/vivado/scripts/create_block_design.tcl.
+4. Check the board preset once if the local PYNQ-Z2 board files are different.
+5. Generate the wrapper, run synthesis, implementation, and bitstream.
+6. Run hardware/vivado/scripts/package_overlay.tcl to copy the .bit and .hwh files.
+7. Copy the repo to the PYNQ-Z2 and test the overlay with the Python scripts.
