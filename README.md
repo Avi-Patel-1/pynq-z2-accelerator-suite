@@ -4,7 +4,7 @@ This project builds two hardware accelerators on the PYNQ-Z2 and drives them fro
 
 The repo is split into hardware source, Python drivers, tests, notebooks, and small demo assets. The Python code can run against a mock backend on a normal computer, so the control path and verification flow can be tested before moving to the board.
 
-![System overview](docs/figures/system_overview.svg)
+![System overview](docs/figures/Adobe Express -file.png)
 
 ## Hardware and software
 
